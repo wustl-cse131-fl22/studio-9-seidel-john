@@ -19,9 +19,25 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
-		// FIXME
-		throw new NotYetImplementedException();
+		
+		Map<String, Integer> persons = new HashMap<>();
+		persons.put("Jordan", 65);
+		persons.put("Sophie", 65);
+		persons.put("Kyle", 72);
+		
+		String nme = "";
+		
+		while(!nme.equals("quit")) {
+			nme = in.nextLine();
+			if(persons.containsKey(nme)) {
+				System.out.println(persons.get(nme));
+			}else if(!persons.containsKey(nme) && !nme.equals("quit")){
+				System.out.println("This name does not exist in the map.");
+			}
+			
+			
+		}
+	
 
 	}
 }
